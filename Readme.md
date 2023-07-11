@@ -1,5 +1,5 @@
 
- ![Banner Shodan](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/help.png)
+ ![Banner Shodan](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/shodan.png)
 Ferramenta de Enumeração Rápida utilizando Shodan
 =================================================
 

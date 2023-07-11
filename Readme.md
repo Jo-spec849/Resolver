@@ -1,3 +1,5 @@
+
+ ![Banner Shodan](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/help.png)
 Ferramenta de Enumeração Rápida utilizando Shodan
 =================================================
 
@@ -54,17 +56,17 @@ Utilização do script
 
 Aqui estão algumas capturas de tela que demonstram o uso do script:
 
-1.  Executando o script com a opção `-b` para exibir todos os banners disponíveis:
+1.  Executando o script com a opção `-h` para exibir o help do comando:
     
-    ![Exibição de banners](screenshots/banners.png)
+    ![Execucao do script](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/help.png)
     
 2.  Executando o script com os argumentos de arquivo de entrada e chave de API:
     
-    ![Executando com arquivo de entrada e chave de API](screenshots/execution.png)
+    ![Executando com arquivo de entrada e chave de API](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/run.png)
     
 3.  Resultados salvos em uma planilha (formato XLSX ou CSV):
     
-    ![Planilha de resultados](screenshots/results.xlsx)
+    ![Planilha de resultados](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/output.png)
     
 
 O processo de reconhecimento é uma etapa essencial em um teste de penetração. Ele permite coletar informações valiosas sobre os alvos, identificar possíveis vulnerabilidades e traçar estratégias adequadas para o restante do teste. A ferramenta desenvolvida visa automatizar parte desse processo, fornecendo uma enumeração rápida e organizada dos hosts, facilitando a análise posterior.

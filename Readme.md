@@ -1,79 +1,78 @@
-
- ![Banner Shodan](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/shodan.png)
-Ferramenta de Enumeração Rápida utilizando Shodan
+![Banner Shodan](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/shodan.png)
+Fast Enumeration Tool using Shodan
 =================================================
 
-Este é um script Python desenvolvido para auxiliar no processo de reconhecimento durante um teste de penetração. Durante uma colaboração com a equipe da PROOF, identifiquei a necessidade de uma ferramenta que realizasse uma enumeração inicial rápida enquanto outras ferramentas, como o nmap, estivessem em execução. Com base nessa necessidade, criei este script que utiliza os dados disponíveis no Shodan para realizar uma enumeração rápida, aproveitando as informações já coletadas pela plataforma.
+This is a Python script developed to assist in the reconnaissance process during a penetration test. During collaboration with the PROOF team, I identified the need for a tool that would perform a quick initial enumeration while other tools, such as nmap, were running. Based on this need, I created this script that utilizes the data available in Shodan to perform a rapid enumeration, leveraging the information already collected by the platform.
 
-Shodan e seu uso
+Shodan and its use
 ----------------
 
-O Shodan é um mecanismo de busca que permite encontrar dispositivos conectados à Internet, incluindo servidores, câmeras IP, roteadores e muito mais. Diferente dos motores de busca convencionais, o Shodan se concentra em encontrar dispositivos específicos, em vez de páginas da web. Ele indexa informações sobre os serviços em execução nos dispositivos, como portas abertas, banners e outras informações detalhadas. Isso pode ser extremamente útil para os profissionais de segurança, pois permite identificar alvos potenciais e avaliar a exposição de dispositivos conectados à Internet.
+Shodan is a search engine that allows you to find devices connected to the internet, including servers, IP cameras, routers, and more. Unlike traditional search engines, Shodan focuses on finding specific devices rather than web pages. It indexes information about the services running on the devices, such as open ports, banners, and other detailed information. This can be extremely useful for security professionals as it allows for identifying potential targets and assessing the exposure of internet-connected devices.
 
-História
+History
 --------
 
-Durante a realização de um teste de penetração em parceria com a equipe da PROOF, deparei-me com a necessidade de uma ferramenta que fornecesse uma enumeração inicial rápida enquanto outras ferramentas estavam em execução. Essa enumeração inicial poderia fornecer informações valiosas que poderiam ser usadas para direcionar os esforços durante o teste.
+During a penetration test collaboration with the PROOF team, I encountered the need for a tool that would provide a quick initial enumeration while other tools were running. This initial enumeration could provide valuable information that could be used to target efforts during the test.
 
-Foi então que decidi criar esse script Python, que utiliza os dados disponíveis no Shodan para realizar uma enumeração inicial rápida. Ele aproveita as informações já coletadas pela plataforma Shodan, como portas abertas e detalhes da organização proprietária dos dispositivos. Essas informações são fundamentais para encontrar outros hosts pertencentes à mesma organização e expostos na Internet. Além disso, o script realiza a verificação de hosts ativos para fornecer um panorama mais atualizado.
+That's when I decided to create this Python script that utilizes the data available in Shodan to perform a quick initial enumeration. It leverages the information already collected by the Shodan platform, such as open ports and details of the device's owning organization. This information is crucial to finding other hosts belonging to the same organization and exposed on the internet. Additionally, the script performs active host checking to provide a more up-to-date overview.
 
-O script armazena todas as informações coletadas de forma organizada em uma planilha, permitindo uma fácil análise e compreensão dos resultados. Ele também vai incluir a funcionalidade de tirar prints da página inicial dos sites encontrados, facilitando a visualização e a posterior análise dos alvos identificados.
+The script stores all the collected information in an organized spreadsheet, allowing for easy analysis and understanding of the results. It will also include the functionality to capture screenshots of the homepages of the identified sites, facilitating their visualization and subsequent analysis.
 
-Funcionalidades atuais e futuras
+Current and future features
 --------------------------------
 
-As principais funcionalidades atuais do script são:
+The main current features of the script include:
 
-*   Enumeração rápida de hosts utilizando o Shodan.
-*   Levantamento de portas abertas e detalhes da organização proprietária.
-*   Verificação de hosts ativos.
-*   Lista de Vulnerabilidades presentes nos serviços que são de conhecimento do Shodan
-*   Armazenamento das informações em uma planilha.
-*   Armazenamento dos Jsons das consultas realizadas
-*   Possibilidade de escolha do formato de saida CSV ou XLSX
+* Rapid enumeration of hosts using Shodan.
+* Gathering of open ports and details of the owning organization.
+* Active host checking.
+* List of vulnerabilities present in the services that are known to Shodan.
+* Storage of information in a spreadsheet.
+* Storage of the JSON data of the performed queries.
+* Choice of output format: CSV or XLSX.
 
-Funcionalidades planejadas para futuras versões do script incluem:
+Planned features for future versions of the script include:
 
-*   Implementação da função para acessar os hosts e capturar prints da página inicial dos sites encontrados.
-*   Inclusão do protocolo utilizado em cada porta identificada.
-*   Inclusão do Banner do serviços encontrados
-*   Coleta de links conhecidos pelo The wayBack Machine de todos os alvos fornecidos
+* Implementation of a function to access the hosts and capture screenshots of the homepages of the identified sites.
+* Inclusion of the protocol used for each identified port.
+* Inclusion of the banners of the found services.
+* Gathering of known links from The Wayback Machine for all provided targets.
 
-Essas melhorias visam fornecer uma visão mais abrangente e facilitar o processo de reconhecimento durante um teste de penetração.
+These improvements aim to provide a more comprehensive view and facilitate the reconnaissance process during a penetration test.
 
-Utilização do script
+Using the script
 --------------------
 
-1.  Certifique-se de ter o Python instalado no seu sistema.
-2.  Faça o download do código-fonte do script a partir do seguinte repositório: \[URL DO REPOSITÓRIO\].
-3.  Abra o terminal ou prompt de comando e navegue até o diretório onde o script foi salvo.
-4.  Execute o script utilizando o seguinte comando:
+1. Make sure you have Python installed on your system.
+2. Download the script's source code from the following repository: \[REPOSITORY URL\].
+3. Open the terminal or command prompt and navigate to the directory where the script is saved.
+4. Run the script using the following command:
     
       
     ```bash
     python3 resolver-banners.py  -h
     ```
 
-Aqui estão algumas capturas de tela que demonstram o uso do script:
+Here are some screenshots demonstrating the use of the script:
 
-1.  Executando o script com a opção `-h` para exibir o help do comando:
+1. Running the script with the `-h` option to display the command's help:
     
-    ![Execucao do script](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/help.png)
+    ![Script execution](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/help.png)
     
-2.  Executando o script com os argumentos de arquivo de entrada e chave de API:
+2. Running the script with the input file and API key arguments:
     
-    ![Executando com arquivo de entrada e chave de API](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/run.png)
+    ![Running with input file and API key](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/run.png)
     
-3.  Resultados salvos em uma planilha (formato XLSX ou CSV):
+3. Results saved in a spreadsheet (XLSX or CSV format):
     
-    ![Planilha de resultados](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/output.png)
+    ![Results spreadsheet](https://raw.githubusercontent.com/Jo-spec849/Resolver/main/Prints/output.png)
     
 
-O processo de reconhecimento é uma etapa essencial em um teste de penetração. Ele permite coletar informações valiosas sobre os alvos, identificar possíveis vulnerabilidades e traçar estratégias adequadas para o restante do teste. A ferramenta desenvolvida visa automatizar parte desse processo, fornecendo uma enumeração rápida e organizada dos hosts, facilitando a análise posterior.
+The reconnaissance process is an essential step in a penetration test. It allows for collecting valuable information about the targets, identifying potential vulnerabilities, and devising appropriate strategies for the remainder of the test. The developed tool aims to automate part of this process by providing a quick and organized enumeration of hosts, facilitating further analysis.
 
-Note que essa é uma versão inicial da ferramenta, e novas funcionalidades e aprimoramentos estão planejados para futuras versões.
+Please note that this is an initial version of the tool, and new features and enhancements are planned for future versions.
 
-Agradecimentos
+Acknowledgements
 --------------------
 
-Agradeço pela colaboração do meu colega Gabriel Comonian que me ajudou com os testes iniciais do script e ao chat GPT pela ajuda com o desenvolvimento
+I would like to thank my colleague Gabriel Comonian for his collaboration in the initial testing of the script, and the GPT chat for their assistance in the development.
